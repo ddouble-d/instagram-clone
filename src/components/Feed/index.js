@@ -1,10 +1,11 @@
 import React from "react";
-import { FlatList } from "react-native";
+import { FlatList, StyleSheet } from "react-native";
 import Post from "../Post";
 import Stories from "../Stories";
 
 const data = [
   {
+    id: "1",
     user: {
       name: "dokdes",
       imageUri:
@@ -16,6 +17,7 @@ const data = [
     postedAt: "6 minutes ago",
   },
   {
+    id: "2",
     user: {
       name: "desdok",
       imageUri:
@@ -27,6 +29,7 @@ const data = [
     postedAt: "6 minutes ago",
   },
   {
+    id: "3",
     user: {
       name: "dokdes",
       imageUri:
@@ -41,10 +44,18 @@ const data = [
 
 const Feed = () => (
   <FlatList
+    style={styles.flatList}
     data={data}
     renderItem={({ item }) => <Post post={item} />}
+    keyExtractor={({ id }) => id}
     ListHeaderComponent={Stories}
   />
 );
+
+const styles = StyleSheet.create({
+  flatList: {
+    marginTop: 25,
+  },
+});
 
 export default Feed;
