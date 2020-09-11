@@ -2,9 +2,9 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
-    margin: 5,
+    margin: 8,
     borderRadius: 40,
-    borderWidth: 3,
+    borderWidth: 2,
     borderColor: "#ae22e0",
   },
   image: {

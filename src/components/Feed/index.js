@@ -44,18 +44,11 @@ const data = [
 
 const Feed = () => (
   <FlatList
-    style={styles.flatList}
     data={data}
     renderItem={({ item }) => <Post post={item} />}
     keyExtractor={({ id }) => id}
     ListHeaderComponent={Stories}
   />
 );
-
-const styles = StyleSheet.create({
-  flatList: {
-    marginTop: 25,
-  },
-});
 
 export default Feed;
